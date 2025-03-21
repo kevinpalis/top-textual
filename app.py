@@ -10,7 +10,7 @@ class TopLikeApp(App):
     BINDINGS = [
         ("d", "toggle_dark", "Toggle dark mode"),
     ]
-
+    dark = reactive(False)
     interval = reactive(10.0)
 
     def compose(self) -> ComposeResult:
@@ -19,7 +19,9 @@ class TopLikeApp(App):
         yield Footer()
 
     def action_toggle_dark(self) -> None:
-        self.dark = not self.dark
+        """Toggle between light and dark themes."""
+        self.theme = "textual-dark" if self.theme == "textual-light" else "textual-light"
+
 
 if __name__ == "__main__":
     app = TopLikeApp()
