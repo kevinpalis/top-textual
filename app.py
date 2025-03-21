@@ -6,7 +6,7 @@ from textual.reactive import reactive
 from components.process_table import ProcessTable
 
 class TopLikeApp(App):
-    CSS_PATH = "styles/app.css"
+    CSS_PATH = "styles/app.tcss"
     BINDINGS = [
         ("d", "toggle_dark", "Toggle dark mode"),
     ]
