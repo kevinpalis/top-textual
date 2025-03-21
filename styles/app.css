@@ -1,0 +1,8 @@
+Screen {
+    align: center middle;
+    padding: 1;
+}
+
+DataTable {
+    border: round $accent;
+}
